@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tyler J. Brangman</title>
+    <description>Tyler Brangman - Portfolio Site
+</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 14 Oct 2017 19:44:28 -0400</pubDate>
+    <lastBuildDate>Sat, 14 Oct 2017 19:44:28 -0400</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+  </channel>
+</rss>

@@ -1,0 +1,296 @@
+@import url("https://rsms.me/interface/interface.css");
+/* Global Styles */
+* {
+  font-family: Interface, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+body {
+  background-color: #fefefe; }
+
+#myCanvas {
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -3;
+  transform: translate3d(0, -50%, 0) scale(1); }
+
+#aboutme {
+  visibility: hidden;
+  padding: 70px;
+  z-index: 3;
+  position: fixed;
+  right: 0;
+  width: 500px;
+  height: 100%;
+  background-color: #F7F6F5; }
+  #aboutme .resume {
+    margin: 20px 0; }
+    #aboutme .resume a {
+      background-color: #000;
+      text-decoration: none;
+      color: #fff;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 5px;
+      text-decoration: none; }
+      #aboutme .resume a:hover {
+        background-color: #babaff; }
+  #aboutme .closeBtn, #aboutme svg {
+    cursor: pointer;
+    width: 80px;
+    margin-left: auto;
+    vertical-align: middle; }
+  #aboutme .closeBtn {
+    font-size: 20px;
+    margin-bottom: 40px; }
+    #aboutme .closeBtn svg {
+      width: 20px; }
+  #aboutme .bio {
+    font-size: 25px; }
+
+.projectBox {
+  position: fixed;
+  border: 1px solid;
+  width: 900px;
+  height: 500px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -3;
+  transform: translate3d(0, -50%, 0) scale(1); }
+
+/* Global Items */
+nav {
+  padding: 50px 0;
+  font-weight: 300; }
+  nav .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; }
+    nav .container .modal {
+      cursor: pointer;
+      font-size: 20px; }
+    nav .container a {
+      text-decoration: none;
+      color: #000;
+      font-size: 20px; }
+
+/* Introduction */
+.intro {
+  padding: 80px 0; }
+  .intro h1 {
+    color: #000;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 70px; }
+  .intro a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 10px;
+    margin: 20px 0;
+    width: 150px;
+    text-decoration: none;
+    font-size: 13px; }
+    .intro a:hover {
+      background-color: #babaff; }
+    .intro a:hover > svg {
+      transition: 0.5s;
+      -webkit-transition: 0.5s;
+      font-size: 10px;
+      margin-left: 18px; }
+    .intro a svg {
+      margin-left: 10px;
+      width: auto;
+      color: #fff; }
+
+.proj-description {
+  color: #000;
+  text-decoration: none;
+  margin: 20px 0; }
+  .proj-description img {
+    width: 100%;
+    margin: 10px 0; }
+  .proj-description span {
+    text-transform: uppercase;
+    color: #b3b3b3;
+    font-weight: 700;
+    font-size: 13px; }
+
+/* Carousel CSS */
+.main-carousel {
+  width: 50%;
+  margin: 30px auto;
+  text-align: center; }
+  .main-carousel .flickity-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .main-carousel .carousel-cell {
+    width: 100%;
+    /* full width */
+    margin-right: 10px; }
+
+/* Project Case Study */
+.case-study {
+  margin: 20px 0;
+  /* Case Study Paragraphs */ }
+  .case-study img {
+    width: 100%; }
+  .case-study .case-paragraph {
+    margin: 30px auto;
+    width: auto; }
+    .case-study .case-paragraph p {
+      line-height: 1.6;
+      font-weight: 700;
+      font-size: 40px; }
+    .case-study .case-paragraph .role {
+      font-weight: 500;
+      font-size: 20px;
+      color: #95a5a6; }
+      .case-study .case-paragraph .role li {
+        margin-top: 10px;
+        margin-right: 10px;
+        list-style-type: none;
+        display: inline-block; }
+    .case-study .case-paragraph .visit-link {
+      font-weight: 700;
+      font-size: 40px; }
+  .case-study .visit-link {
+    margin: 0 auto;
+    position: relative;
+    color: #000;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    transition: 0.4s;
+    -webkit-transition: 0.4s; }
+    .case-study .visit-link:after {
+      position: absolute;
+      z-index: -1;
+      bottom: -0.01em;
+      left: 0px;
+      width: 100%;
+      border-bottom: 16px solid #babaff;
+      content: ''; }
+    .case-study .visit-link:hover {
+      background-color: #babaff; }
+
+/* Two by Two Grids */
+#grid-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+/* Feature Project Divs */
+.fp .proj-type {
+  color: #A9B4BA;
+  text-transform: uppercase;
+  font-size: 10px; }
+.fp a {
+  color: #000;
+  text-decoration: none; }
+
+/* Purdue IP Grid */
+.ip img {
+  border: 1px solid #1b1b1b;
+  width: 80%;
+  margin: 0 auto; }
+
+footer {
+  display: block;
+  padding: 70px 0; }
+  footer a {
+    position: relative;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s; }
+    footer a:after {
+      position: absolute;
+      z-index: -1;
+      bottom: -0.2em;
+      left: 0px;
+      width: 100%;
+      border-bottom: 15px solid #babaff;
+      content: ''; }
+    footer a:hover {
+      font-weight: 500;
+      background-color: #babaff; }
+  footer p {
+    margin: 5px 0;
+    font-size: 25px; }
+
+@media only screen and (max-width: 700px) {
+  /* Introduction */
+  .intro h1 {
+    color: #000;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 30px; }
+
+  .ip {
+    text-align: center; }
+    .ip img {
+      border: 1px solid #1b1b1b;
+      width: 100%;
+      margin: 0 auto; }
+
+  /* Project Case Study */
+  .case-study {
+    margin: 20px 0;
+    /* Case Study Paragraphs */ }
+    .case-study img {
+      width: 100%; }
+    .case-study .case-paragraph {
+      margin: 30px auto;
+      width: auto; }
+      .case-study .case-paragraph p {
+        line-height: 1.6;
+        font-weight: 700;
+        font-size: 20px; }
+      .case-study .case-paragraph .role {
+        font-weight: 500;
+        font-size: 15px;
+        color: #95a5a6; }
+        .case-study .case-paragraph .role li {
+          margin-top: 10px;
+          margin-right: 10px;
+          list-style-type: none;
+          display: inline-block; }
+      .case-study .case-paragraph .visit-link {
+        font-weight: 700;
+        font-size: 20px; }
+    .case-study .visit-link {
+      margin: 0 auto;
+      position: relative;
+      color: #000;
+      font-size: 10px;
+      font-weight: 300;
+      text-decoration: none;
+      transition: 0.4s;
+      -webkit-transition: 0.4s; }
+      .case-study .visit-link:after {
+        position: absolute;
+        z-index: -1;
+        bottom: -0.01em;
+        left: 0px;
+        width: 100%;
+        border-bottom: 10px solid #babaff;
+        content: ''; }
+      .case-study .visit-link:hover {
+        background-color: #babaff; } }
