@@ -4,10 +4,10 @@
     <title>Tyler J. Brangman</title>
     <description>Tyler Brangman - Portfolio Site
 </description>
-    <link>/</link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 14 Oct 2017 20:13:19 -0400</pubDate>
-    <lastBuildDate>Sat, 14 Oct 2017 20:13:19 -0400</lastBuildDate>
+    <link>http://tylerjbrangman.me/</link>
+    <atom:link href="http://tylerjbrangman.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 16 Oct 2017 10:37:37 -0400</pubDate>
+    <lastBuildDate>Mon, 16 Oct 2017 10:37:37 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
   </channel>

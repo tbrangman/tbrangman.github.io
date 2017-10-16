@@ -8,20 +8,21 @@
 body {
   background-color: #fefefe; }
 
-#myCanvas {
-  text-align: center;
+.bg-canvas {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fff;
   position: fixed;
-  top: 50%;
+  z-index: -10;
+  opacity: 1;
   left: 0;
-  right: 0;
-  margin: 0 auto;
-  z-index: -3;
-  transform: translate3d(0, -50%, 0) scale(1); }
+  -webkit-transform: translate3d(0, 0, 0); }
 
 #aboutme {
   visibility: hidden;
   padding: 70px;
-  z-index: 3;
+  z-index: 5;
   position: fixed;
   right: 0;
   width: 500px;
@@ -289,11 +290,13 @@ footer {
         font-size: 15px; }
 
   /* Introduction */
-  .intro h1 {
-    color: #000;
-    font-weight: 700;
-    line-height: 1.5;
-    font-size: 30px; }
+  .intro {
+    padding: 40px 0; }
+    .intro h1 {
+      color: #000;
+      font-weight: 700;
+      line-height: 1.5;
+      font-size: 30px; }
 
   .ip {
     text-align: center; }
