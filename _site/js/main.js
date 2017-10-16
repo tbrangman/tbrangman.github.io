@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+jQuery(document).ready(function($) {
     $('.main-carousel').flickity({
 	  // options
 	  cellAlign: 'left',
@@ -14,11 +14,5 @@ $( document ).ready(function() {
     $('.closeBtn').click(function(){
     	$('#aboutme').css('visibility','hidden');
     });
-
-    /*
-    $('a').bind('mouseover', function(){
-    	$()
-    });
-    */
 });
 
