@@ -2,7 +2,6 @@
 /* Global Styles */
 * {
   font-family: Interface, sans-serif;
-  margin: 0;
   padding: 0; }
 
 body {
@@ -128,10 +127,27 @@ nav {
     font-weight: 700;
     font-size: 13px; }
 
+/* Table CSS */
+table {
+  margin: 20px 0;
+  width: 100%;
+  overflow-x: visible;
+  overflow-y: visible; }
+  table th {
+    text-align: center;
+    font-size: 15px; }
+  table td, table th {
+    vertical-align: text-top;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px; }
+  table tr:nth-child(even) {
+    background-color: #dddddd; }
+
 /* Carousel CSS */
 .main-carousel {
-  width: 50%;
-  margin: 30px auto;
+  width: 70%;
+  margin: 30px 0;
   text-align: center; }
   .main-carousel .flickity-slider {
     display: flex;
@@ -149,24 +165,28 @@ nav {
   .case-study img {
     width: 100%; }
   .case-study .case-paragraph {
-    margin: 30px auto;
-    width: auto; }
+    margin: 30px 0; }
     .case-study .case-paragraph p {
       line-height: 1.6;
-      font-weight: 700;
-      font-size: 40px; }
+      font-weight: 500;
+      font-size: 35px;
+      width: 100%; }
+    .case-study .case-paragraph span {
+      font-weight: 500;
+      color: #95a5a6; }
     .case-study .case-paragraph .role {
       font-weight: 500;
       font-size: 20px;
       color: #95a5a6; }
       .case-study .case-paragraph .role li {
+        font-size: 20px;
         margin-top: 10px;
         margin-right: 10px;
         list-style-type: none;
         display: inline-block; }
     .case-study .case-paragraph .visit-link {
-      font-weight: 700;
-      font-size: 40px; }
+      font-weight: 500;
+      font-size: 35px; }
   .case-study .visit-link {
     margin: 0 auto;
     position: relative;
@@ -182,7 +202,7 @@ nav {
       bottom: -0.01em;
       left: 0px;
       width: 100%;
-      border-bottom: 16px solid #babaff;
+      border-bottom: 12px solid #babaff;
       content: ''; }
     .case-study .visit-link:hover {
       background-color: #babaff; }
@@ -304,6 +324,35 @@ footer {
       border: 1px solid #1b1b1b;
       width: 100%;
       margin: 0 auto; }
+
+  /* Table CSS */
+  table {
+    margin: 20px 0;
+    width: auto; }
+    table th {
+      text-align: center;
+      font-size: 10px; }
+    table td, table th {
+      font-size: 10px;
+      vertical-align: text-top;
+      text-align: left;
+      padding: 10px; }
+    table tr:nth-child(even) {
+      background-color: #dddddd; }
+
+  /* Carousel CSS */
+  .main-carousel {
+    width: 100%;
+    margin: 30px 0;
+    text-align: center; }
+    .main-carousel .flickity-slider {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .main-carousel .carousel-cell {
+      width: 100%;
+      /* full width */
+      margin-right: 10px; }
 
   /* Project Case Study */
   .case-study {

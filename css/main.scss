@@ -7,7 +7,6 @@
 /* Global Styles */
 *{
 	font-family: Interface, sans-serif;
-	margin: 0;
 	padding: 0;
 }
 
@@ -177,10 +176,35 @@ nav{
 	}
 }
 
+/* Table CSS */
+table {
+	margin: 20px 0;
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+
+    th{
+    	text-align: center;
+    	font-size: 15px;
+    }
+
+    td, th {
+   	vertical-align: text-top;
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+}
+
 /* Carousel CSS */
 .main-carousel{
-	width: 50%;
-	margin: 30px auto;
+	width: 70%;
+	margin: 30px 0;
 	text-align: center;
 
 	.flickity-slider {
@@ -205,13 +229,18 @@ nav{
 
 	/* Case Study Paragraphs */
 	.case-paragraph{
-		margin: 30px auto;
-		width: auto;
+		margin: 30px 0;
 
 		p{
 			line-height: 1.6;
-			font-weight: 700;
-			font-size: 40px;
+			font-weight: 500;
+			font-size: 35px;
+			width: 100%;
+		}
+
+		span{
+			font-weight: 500;
+			color: #95a5a6;
 		}
 
 		.role{
@@ -220,6 +249,7 @@ nav{
 			color: #95a5a6;
 
 			li{
+				font-size: 20px;
 				margin-top: 10px;
 				margin-right: 10px;
 				list-style-type: none;
@@ -228,8 +258,8 @@ nav{
 		}
 
 		.visit-link{
-			font-weight: 700;
-			font-size: 40px;
+			font-weight: 500;
+			font-size: 35px;
 		}
 	}
 
@@ -249,7 +279,7 @@ nav{
 			bottom: -0.01em;
 			left: 0px;
 			width: 100%;
-			border-bottom: 16px solid #babaff;
+			border-bottom: 12px solid #babaff;
 			content: '';
 		}
 
@@ -326,6 +356,11 @@ footer{
 		font-size: 25px;
 	}
 }
+
+
+
+
+
 
 @media only screen and (max-width: 700px) {
 #aboutme{
@@ -423,6 +458,47 @@ nav{
 			margin: 0 auto;
 		}
 	}
+
+/* Table CSS */
+table {
+	margin: 20px 0;
+    width: auto;
+
+    th{
+    	text-align: center;
+    	font-size: 10px;
+    }
+
+    td, th {
+    font-size: 10px;
+   	vertical-align: text-top;
+    text-align: left;
+    padding: 10px;
+
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+}
+
+/* Carousel CSS */
+.main-carousel{
+	width: 100%;
+	margin: 30px 0;
+	text-align: center;
+
+	.flickity-slider {
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	}
+
+	.carousel-cell {
+	 	width: 100%; /* full width */
+  		margin-right: 10px;
+	}
+}
 
 /* Project Case Study */
 .case-study{

@@ -16,8 +16,8 @@ permalink: /purdue-ip
 	</div>
 
 	<div class="main-carousel">
-	  <div class="carousel-cell"><img class="ip-flyer" src="{{ site.baseurl }}/assets/ip/mix-program.jpg"/></div>
-	  <div class="carousel-cell"><img class="ip-flyer" src="{{ site.baseurl }}/assets/ip/cwg-flyer.jpg"/></div>
+	  <div class="carousel-cell"><img class="ip-flyer" style="width: 80%;" src="{{ site.baseurl }}/assets/ip/mix-program.jpg"/></div>
+	  <div class="carousel-cell"><img class="ip-flyer" style="width: 80%;" src="{{ site.baseurl }}/assets/ip/cwg-flyer.jpg"/></div>
 	  <div class="carousel-cell"><img class="ip-flyer" style="width: 80%;" src="{{ site.baseurl }}/assets/ip/AwardCeremony2016.jpg"/></div>
 	  <div class="carousel-cell"><img class="ip-flyer" style="width: 80%;" src="{{ site.baseurl }}/assets/ip/mixed-up-cup.jpg" /></div>
 	</div>
