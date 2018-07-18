@@ -12,6 +12,10 @@
 	font-family: 'IBM Plex Mono', monospace;
 }
 
+.container{
+	width: 70%;
+}
+
 /* Navigation */
 .logo-about{
 	text-align: center;
@@ -37,8 +41,9 @@
 	top: 0;
 	right: 0;
 	color: #000;
-	font-size: 12px;
+	font-size: 30px;
 	margin: 15px;
+	z-index: 99;	
 }
 
 .more-info{
@@ -68,30 +73,6 @@ footer{
 	font-size: 15px;
 	font-weight: 300;
 	color: #b3b3b3;
-}
-
-.bg-canvas{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	position: fixed;
-	z-index: -10;
-	opacity: 1;
-	left: 0;
-	-webkit-transform: translate3d(0,0,0);
-}
-
-.projectBox{
-	position: fixed;
-	border: 1px solid;
-	width: 900px;
-	height: 500px;
-	top: 50%;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
-	z-index: -3;
-	transform: translate3d(0, -50%, 0) scale(1);
 }
 
 .fp{
@@ -150,199 +131,88 @@ footer{
 	}
 }
 
-/* Carousel CSS */
-.main-carousel{
-	border-radius: 5px;
-	padding: 10px;
-
-	.carousel-cell {
-	  width: 100%; /* full width */
-	  margin-right: 10px;
-
-	  img{
-	  	display: block;
-	  	margin: 0 auto;
-	  }
-	}
-
-	/* smaller arrows, no background */
-		.flickity-prev-next-button {
-		  width: 30px;
-		  height: 30px;
-		  border-radius: 5px;
-		}
-		/* icon color */
-		.flickity-button-icon {
-		  fill: #000;
-		}
-
-		/* position outside */
-		.flickity-prev-next-button.previous {
-		  left: -30px;
-		}
-		.flickity-prev-next-button.next {
-		  right: -30px;
-		}
-}
 
 
-/* Table CSS */
-table {
-	margin: 20px 0;
-    width: 100%;
-    overflow-x: visible;
-    overflow-y: visible;
 
-    th{
-    	text-align: center;
-    	font-size: 15px;
-    }
-
-    td, th {
-   	vertical-align: text-top;
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 10px;
-
-	}
-
-	tr:nth-child(even) {
-	    background-color: #dddddd;
-	}
-}
-
-
-/* Project Case Study */
-.case-study{
-	margin: 20px 0;
-
-	p{
-		font-size: 40px;
-	}
-
-	.project-title{
-		font-size: 60px;
-	}
-
-	.role{
-		font-size: 18px;
-		color: #95a5a6;
-	}
-
-	img{
-		width: 100%;
-	}
-
-	.visit-link{
-		font-weight: 500;
-		width: 275px;
-		color: #000;
-		margin: 20px 0;
-		text-decoration: none;
-		font-size: 25px;
-		padding: 10px;
-		border: 2px solid #000;
-		transition: 0.4s;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		&:hover{
-			background-color: #000;
-			color: #fff;
-		}
-
-		svg{
-			margin-left: 5px;
-			width: 40px;
-			height: 40px;
-		}
-	}
-}
-
-/* Two by Two Grids */
-#grid-item{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-}
-
-/* Purdue IP Grid */
-.ip{
-
-	img{
-		border: 1px solid #1b1b1b;
-		width: 80%;
-		margin: 0 auto;
-	}
-}
 
 
 
 @media only screen and (max-width: 700px) {
 
-/* Introduction */
-.intro{
-	padding: 40px 0;
-
-	h1{
-		color: #000;
-		font-weight: 700;
-		line-height: 1.5;
-		font-size: 30px;
-	}
+.container{
+	width: 90%;
 }
 
-    .ip{
-    	text-align: center;
-
-		img{
-			border: 1px solid #1b1b1b;
-			width: 100%;
-			margin: 0 auto;
-		}
-	}
-
-/* Table CSS */
-table {
-	margin: 20px 0;
-    width: auto;
-
-    th{
-    	text-align: center;
-    	font-size: 10px;
-    }
-
-    td, th {
-    font-size: 10px;
-   	vertical-align: text-top;
-    text-align: left;
-    padding: 10px;
-
-	}
-
-	tr:nth-child(even) {
-	    background-color: #dddddd;
-	}
+.say-hello{
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: #000;
+	font-size: 20px;
+	margin: 15px;
+	z-index: 99;	
 }
 
-/* Carousel CSS */
-.main-carousel{
-		width: 100%;
+.fp{
+	margin: 100px 0;
+
+	.proj-description{
 		margin: 30px 0;
-		text-align: center;
 
-		.flickity-slider {
-		  display: flex;
-		  align-items: center;
-		  justify-content: center;
+		p{
+			font-size: 12px;
+			font-weight: 500;
 		}
 
-		.carousel-cell {
-		 	width: 100%; /* full width */
-	  		margin-right: 10px;
+		.proj-tagline{
+			font-size: 10px;
+			font-weight: 300;
+			color: #777777;
+		}
+	}
+	
+	/* Photo background for certain items */
+	.proj-photo-bg{
+		text-align: center;
+		position: relative;
+		border-radius: 5px;
+		background: #F8F8FA;
+		padding: 20px;
+		margin: 5px;
+
+		.phone-proj{
+			text-align: center;
+			width: 300px;
+		}
+
+		.visit-website{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			margin: 5px;
+			top: -10px;
+			right: -10px;
+			color: #000;
+			border-radius: 50%;
+			background-color: red;
+
+			svg{
+				color: #fff;
+				width: 15px;
+				height: 15px;
+
+				&:hover{
+					color: #000;
+				}
+			}
 		}
 	}
 }
+
+
+
+}
+
+
 
 
