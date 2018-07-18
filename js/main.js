@@ -14,5 +14,7 @@ jQuery(document).ready(function($) {
     $('.closeBtn').click(function(){
     	$('#aboutme').css('visibility','hidden');
     });
+
+
 });
 

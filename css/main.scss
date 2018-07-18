@@ -6,73 +6,79 @@
 
 /* Global Styles */
 *{
-	font-family: Interface, sans-serif;
 	padding: 0;
+	margin: 0;
+	//font-family: Interface, sans-serif;
+	font-family: 'IBM Plex Mono', monospace;
 }
 
-body{
-	background-color: #fefefe;
+/* Navigation */
+.logo-about{
+	text-align: center;
+	z-index: 99;
+	width: 300px;
+	margin: 50px auto;
+	top: 0;
+
+	font-size: 15px;
+	font-weight: 300;
+
+	a{
+		color: #000;
+	}
+
+	p{
+		font-size: 12px;
+	}
+}
+
+.say-hello{
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: #000;
+	font-size: 12px;
+	margin: 15px;
+}
+
+.more-info{
+	z-index: 99;
+	margin: 15px;
+	padding: 5px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	font-weight: 300;
+	
+	a{
+		font-size: 12px;
+		text-align: right;
+		display: block;
+		color: #000;
+	}
+
+}
+
+footer{
+	z-index: 99;
+	margin: 20px;
+	position: fixed;
+	display: block;
+	bottom: 0;
+	font-size: 15px;
+	font-weight: 300;
+	color: #b3b3b3;
 }
 
 .bg-canvas{
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background: #fff;
 	position: fixed;
 	z-index: -10;
 	opacity: 1;
 	left: 0;
 	-webkit-transform: translate3d(0,0,0);
-}
-
-#aboutme{
-	visibility: hidden;
-	padding: 70px;
-	z-index: 5;
-	position: fixed;
-	right: 0;
-	width: 500px;
-	height: 100%;
-	background-color: #F7F6F5;
-
-	.resume{
-		margin: 20px 0;
-
-		a{
-			background-color: #000;
-			text-decoration: none;
-			color: #fff;
-			padding: 15px;
-			font-size: 18px;
-			border-radius: 5px;
-			text-decoration: none;
-
-			&:hover{
-				background-color: #babaff;
-			}
-		}
-	}
-
-	.closeBtn, svg{
-		cursor: pointer;
-		width: 80px;
-		margin-left: auto;
-		vertical-align: middle;
-	}
-
-	.closeBtn{
-		font-size: 20px;
-		margin-bottom: 40px;
-
-		svg{
-			width: 20px;
-		}
-	}
-
-	.bio{
-		font-size: 25px;
-	}
 }
 
 .projectBox{
@@ -88,93 +94,97 @@ body{
 	transform: translate3d(0, -50%, 0) scale(1);
 }
 
-/* Navigation */
-nav{
-	padding: 50px 0;
-	font-weight: 300;
+.fp{
+	margin: 150px 0;
 
-	.container{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		
-		.modal{
-			cursor: pointer;
-			font-size: 20px;
+	.proj-description{
+		margin: 30px 0;
+
+		p{
+			font-size: 15px;
+			font-weight: 500;
 		}
 
-		a{
-			text-decoration: none;
+		.proj-tagline{
+			font-size: 12px;
+			font-weight: 300;
+			color: #777777;
+		}
+	}
+	
+	/* Photo background for certain items */
+	.proj-photo-bg{
+		text-align: center;
+		position: relative;
+		border-radius: 5px;
+		background: #F8F8FA;
+		padding: 50px;
+		margin: 10px;
+
+		.phone-proj{
+			text-align: center;
+			width: 300px;
+		}
+
+		.visit-website{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			margin: 10px;
+			top: 0;
+			right: 0;
 			color: #000;
-			font-size: 20px;
+			border-radius: 50%;
+			background-color: red;
+
+			svg{
+				color: #fff;
+				width: 20px;
+				height: 20px;
+
+				&:hover{
+					color: #000;
+				}
+			}
 		}
 	}
 }
 
-/* Introduction */
-.intro{
-	padding: 80px 0;
+/* Carousel CSS */
+.main-carousel{
+	border-radius: 5px;
+	padding: 10px;
 
-	h1{
-		color: #000;
-		font-weight: 700;
-		line-height: 1.5;
-		font-size: 70px;
+	.carousel-cell {
+	  width: 100%; /* full width */
+	  margin-right: 10px;
+
+	  img{
+	  	display: block;
+	  	margin: 0 auto;
+	  }
 	}
 
-	a{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #000;
-		text-transform: uppercase;
-		color: #fff;
-		padding: 10px;
-		margin: 20px 0;
-		width: 150px;
-		text-decoration: none;
-		font-size: 13px;
-
-		&:hover{
-			background-color: #babaff;
+	/* smaller arrows, no background */
+		.flickity-prev-next-button {
+		  width: 30px;
+		  height: 30px;
+		  border-radius: 5px;
+		}
+		/* icon color */
+		.flickity-button-icon {
+		  fill: #000;
 		}
 
-		&:hover > svg{
-			transition: 0.5s;
-			-webkit-transition: 0.5s;
-			font-size: 10px;
-			margin-left: 18px;
+		/* position outside */
+		.flickity-prev-next-button.previous {
+		  left: -30px;
 		}
-
-		svg{
-			margin-left: 10px;
-			width: auto;
-			color: #fff;
+		.flickity-prev-next-button.next {
+		  right: -30px;
 		}
-	}
 }
 
-.proj-description{
-	color: #000;
-	text-decoration: none;
-	margin: 20px 0;
-
-	img{
-		//z-index: 99;
-		//position: absolute;
-		width: 100%;
-		margin: 10px 0;
-	}
-
-	span{
-		text-transform: uppercase;
-		color: #b3b3b3;
-		font-weight: 700;
-		font-size: 13px;
-	}
-}
 
 /* Table CSS */
 table {
@@ -201,90 +211,51 @@ table {
 	}
 }
 
-/* Carousel CSS */
-.main-carousel{
-	width: 70%;
-	margin: 30px 0;
-	text-align: center;
-
-	.flickity-slider {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	}
-
-	.carousel-cell {
-	 	width: 100%; /* full width */
-  		margin-right: 10px;
-	}
-}
 
 /* Project Case Study */
 .case-study{
 	margin: 20px 0;
 
+	p{
+		font-size: 40px;
+	}
+
+	.project-title{
+		font-size: 60px;
+	}
+
+	.role{
+		font-size: 18px;
+		color: #95a5a6;
+	}
+
 	img{
 		width: 100%;
 	}
 
-	/* Case Study Paragraphs */
-	.case-paragraph{
-		margin: 30px 0;
-
-		p{
-			line-height: 1.6;
-			font-weight: 500;
-			font-size: 35px;
-			width: 100%;
-		}
-
-		span{
-			font-weight: 500;
-			color: #95a5a6;
-		}
-
-		.role{
-			font-weight: 500;
-			font-size: 20px;
-			color: #95a5a6;
-
-			li{
-				font-size: 20px;
-				margin-top: 10px;
-				margin-right: 10px;
-				list-style-type: none;
-				display: inline-block;
-			}
-		}
-
-		.visit-link{
-			font-weight: 500;
-			font-size: 35px;
-		}
-	}
-
 	.visit-link{
-		margin: 0 auto;
-		position: relative;
+		font-weight: 500;
+		width: 275px;
 		color: #000;
-		font-size: 20px;
-		font-weight: 300;
+		margin: 20px 0;
 		text-decoration: none;
+		font-size: 25px;
+		padding: 10px;
+		border: 2px solid #000;
 		transition: 0.4s;
-		-webkit-transition: 0.4s;
-
-		&:after{
-			position: absolute;
-			z-index: -1;
-			bottom: -0.01em;
-			left: 0px;
-			width: 100%;
-			border-bottom: 12px solid #babaff;
-			content: '';
-		}
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		&:hover{
-			background-color: #babaff;
+			background-color: #000;
+			color: #fff;
+		}
+
+		svg{
+			margin-left: 5px;
+			width: 40px;
+			height: 40px;
 		}
 	}
 }
@@ -294,20 +265,6 @@ table {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-}
-
-/* Feature Project Divs */
-.fp{
-	.proj-type{
-		color: #A9B4BA;
-		text-transform: uppercase;
-		font-size: 10px;
-	}
-
-	a{
-		color: #000;
-		text-decoration: none;
-	}
 }
 
 /* Purdue IP Grid */
@@ -320,122 +277,9 @@ table {
 	}
 }
 
-footer{
-	display: block;
-	padding: 70px 0;
-
-	a{
-		position: relative;
-		color: #000;
-		font-size: 18px;
-		font-weight: 500;
-		text-align: right;
-		text-decoration: none;
-		margin-right: 10px;
-		transition: 0.4s;
-		-webkit-transition: 0.4s;
-
-		&:after{
-			position: absolute;
-			z-index: -1;
-			bottom: -0.2em;
-			left: 0px;
-			width: 100%;
-			border-bottom: 15px solid #babaff;
-			content: '';
-		}
-
-		&:hover{
-			font-weight: 500;
-			background-color: #babaff;
-		}
-	}
-
-	p{
-		margin: 5px 0;
-		font-size: 25px;
-	}
-}
-
-
-
-
 
 
 @media only screen and (max-width: 700px) {
-#aboutme{
-	visibility: hidden;
-	padding: 30px;
-	z-index: 3;
-	position: fixed;
-	right: 0;
-	width: auto;
-	height: 100%;
-	background-color: #F7F6F5;
-
-	.resume{
-		margin: 20px 0;
-
-		a{
-			background-color: #000;
-			text-decoration: none;
-			color: #fff;
-			padding: 15px;
-			font-size: 15px;
-			border-radius: 5px;
-			text-decoration: none;
-
-			&:hover{
-				background-color: #babaff;
-			}
-		}
-	}
-
-	.closeBtn, svg{
-		cursor: pointer;
-		width: 80px;
-		margin-left: auto;
-		vertical-align: middle;
-	}
-
-	.closeBtn{
-		font-size: 20px;
-		margin-bottom: 40px;
-
-		svg{
-			width: 20px;
-		}
-	}
-
-	.bio{
-		font-size: 20px;
-	}
-}
-
-/* Navigation */
-nav{
-	padding: 50px 0;
-	font-weight: 300;
-
-	.container{
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
-		
-		.modal{
-			cursor: pointer;
-			font-size: 15px;
-		}
-
-		a{
-			text-decoration: none;
-			color: #000;
-			font-size: 15px;
-		}
-	}
-}
 
 /* Introduction */
 .intro{
@@ -484,115 +328,19 @@ table {
 
 /* Carousel CSS */
 .main-carousel{
-	width: 100%;
-	margin: 30px 0;
-	text-align: center;
-
-	.flickity-slider {
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	}
-
-	.carousel-cell {
-	 	width: 100%; /* full width */
-  		margin-right: 10px;
-	}
-}
-
-/* Project Case Study */
-.case-study{
-	margin: 20px 0;
-
-	img{
 		width: 100%;
-	}
+		margin: 30px 0;
+		text-align: center;
 
-	/* Case Study Paragraphs */
-	.case-paragraph{
-		margin: 30px auto;
-		width: auto;
-
-		p{
-			line-height: 1.6;
-			font-weight: 700;
-			font-size: 20px;
+		.flickity-slider {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
 		}
 
-		.role{
-			font-weight: 500;
-			font-size: 15px;
-			color: #95a5a6;
-
-			li{
-				margin-top: 10px;
-				margin-right: 10px;
-				list-style-type: none;
-				display: inline-block;
-			}
-		}
-
-		.visit-link{
-			font-weight: 700;
-			font-size: 20px;
-		}
-	}
-
-		.visit-link{
-			margin: 0 auto;
-			position: relative;
-			color: #000;
-			font-size: 10px;
-			font-weight: 300;
-			text-decoration: none;
-			transition: 0.4s;
-			-webkit-transition: 0.4s;
-
-			&:after{
-				position: absolute;
-				z-index: -1;
-				bottom: -0.01em;
-				left: 0px;
-				width: 100%;
-				border-bottom: 10px solid #babaff;
-				content: '';
-			}
-
-			&:hover{
-				background-color: #babaff;
-			}
-		}
-	}
-
-	footer{
-		display: block;
-		padding: 70px 0;
-
-		a{
-			margin: 5px 0;
-			text-align: left;
-			position: relative;
-			display: block;
-			color: #000;
-			font-size: 18px;
-			font-weight: 500;
-			text-decoration: none;
-			transition: 0.4s;
-			-webkit-transition: 0.4s;
-
-			&:after{
-				position: absolute;
-				z-index: -1;
-				bottom: -0.2em;
-				left: 0px;
-				width: 100%;
-				border-bottom: none;
-				content: '';
-			}
-
-			&:hover{
-				background-color: transparent;
-			}
+		.carousel-cell {
+		 	width: 100%; /* full width */
+	  		margin-right: 10px;
 		}
 	}
 }

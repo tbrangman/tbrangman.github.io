@@ -5,50 +5,41 @@
 <meta charset="utf-8">
 <title>Tyler Brangman</title>
 <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
-<link rel="stylesheet" href="{{ site.baseurl }}/css/simple-grid.css">
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
 <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
-<!--Compiled and minified Font Awesome-->
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
 </head>
 
 <html>
 <body>
+
+<div class="logo-about">
+	<a href="{{ site.baseurl }}">Tyler Brangman</a>
+	<p>Design + Development + Data Visualization</p>
+</div>
+
+<a class="say-hello" href="mailto:brangman.tyler@gmail.com">&#x1f44b; Say Hello!</a>
+
+<div class="more-info">
+	<a href="https://www.dropbox.com/s/o265gpzv9ro58pa/Tyler-Brangman-Resume.pdf?dl=1">Resume</a>
+	<a target=”_blank” href="https://www.linkedin.com/in/tylerjbrangman/">LinkedIn</a>
+	<a target=”_blank” href="https://github.com/tbrangman">Github</a>
+</div>
+
 <canvas class="bg-canvas" id="canvas" height="952" width="1080">
 </canvas>
-<div id="aboutme">
-	<p class="closeBtn">Close <i data-feather="x"></i></p>
-	<p class="bio">Designer &amp; developer studying Web Programming and Design at Purdue University. Experienced in user experience, software design, and development of front-end and back-end technologies. In my free time, exploring machine learning &#x1f916;, data visualization &#x1f4c8;, startup ideas &#x1f440;, and cryptocurrencies &#x1f4b0;.</p>
-	<div class="resume">
-		<a href="https://www.dropbox.com/s/qnhpr2nie2cjh1f/Tyler%20Brangman%20Resume%20%282017%29.pdf?dl=1">View my resume &#x1f596;</a>
-	</div>
-</div>
 
-<nav>
-	<div class="container">
-		<a href="{{ site.baseurl }}">Tyler Brangman</a>
-		<span class="modal">About</span>
-	</div>
-</nav>
-
-<div class="container">
-
+<div class="container" style="width:70%;">
 {{ content }}
-
 </div>
 
-<footer>
-	<div class="container">
-		<a target="_blank" href="https://github.com/tbrangman">Github</a>
-		<a target="_blank" href="https://github.com/tbrangman/tbrangman.github.io">View Source</a>
-		<a href="mailto:tbrangma@purdue.edu">Say Hello &#x1f44b;</a>
-		<p>&copy; &#x1f596;</p>
-	</div>
-</footer> 
+<footer>&copy; 2018</footer>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
-<script type="text/javascript" src="{{ site.baseurl }}/js/katerblau.js"></script>
 <script src="https://unpkg.com/feather-icons"></script>
 <script>
   feather.replace()
