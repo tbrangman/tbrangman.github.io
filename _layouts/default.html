@@ -17,30 +17,42 @@ gtag('config', 'UA-122679579-1');
 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.css">
 <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,600" rel="stylesheet">
 </head>
 
 <html>
 <body>
 
-<div class="logo-about">
-	<a href="{{ site.baseurl }}">Tyler Brangman</a>
-	<p>Design + Development + Data Visualization</p>
+<a class="logo" href="{{ site.baseurl }}">Tyler Brangman</a>
+
+<div class="social-media">
+	<a target=”_blank” href="https://www.linkedin.com/in/tylerjbrangman/"><i data-feather="linkedin"></i></a>
+	<!-- <a target=”_blank” href="https://github.com/tbrangman"><i data-feather="figma"></i></a> -->
+	<a target=”_blank” href="https://github.com/tbrangman"><i data-feather="github"></i></a>
+	<a href="mailto:brangman.tyler@gmail.com"><i data-feather="mail"></i></a>
 </div>
 
-<a class="say-hello" href="mailto:brangman.tyler@gmail.com">&#x1f44b;</a>
-
-<div class="more-info">
-	<a href="https://www.dropbox.com/s/5ghemsw2nfezx9x/Tyler-Brangman-Resume%20%282019%29.pdf?dl=1">Resume</a>
-	<a target=”_blank” href="https://www.linkedin.com/in/tylerjbrangman/">LinkedIn</a>
-	<a target=”_blank” href="https://github.com/tbrangman">Github</a>
+<div class="about-me">
+	<div class="more-info">
+		<i class="info-btn" data-feather="info"></i>
+		<div class="about-tags" style="display: none;">
+			<p><span class="about-me-star"></span> The avenue between design and development.</p>
+			<p><span class="about-me-number one">1</span> The product obviously has to be aesthetically pleasing.</p>
+			<p><span class="about-me-number two">2</span> Beauty is important, but it has to be understood by the user. Too many designs today rely on beauty rather than usability.</p>
+			<p><span class="about-me-number three">3</span> Millenial web space where attention span and information is needed as quickly as possible.</p>
+		</div>
+	</div>
+	<img class="animoji" src="{{ site.baseurl }}/assets/brangman-animoji-trans.gif"/>
+	<p>Design technologist <span class="about-me-star">*</span> creating beautiful <span class="about-me-number one">1</span> and intuitive <span class="about-me-number two">2</span> solutions for the digital web ecosystem <span class="about-me-number three">3</span>.</p>
+	<a class="view-resume" href="https://www.dropbox.com/s/svymufqvuvzub7l/Tyler-Brangman-Resume-2019.pdf?dl=1">download-resume.exe <i data-feather="arrow-up-right"></i></a>
 </div>
 
-<div class="container">
-{{ content }}
+<div class="projects">
+	{{ content }}
 </div>
 
-<footer>&copy; 2018</footer>
+<footer>&copy; 2019</footer>
+<!-- <a href="https://www.dropbox.com/s/5ghemsw2nfezx9x/Tyler-Brangman-Resume%20%282019%29.pdf?dl=1">Resume <i data-feather="arrow-up-right"></i></a> -->
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

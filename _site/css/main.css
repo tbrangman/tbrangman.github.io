@@ -3,145 +3,462 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'IBM Plex Mono', monospace; }
+  font-family: 'IBM Plex Sans', sans-serif; }
 
-.container {
-  width: 70%; }
-
-/* Navigation */
-.logo-about {
-  text-align: center;
-  z-index: 99;
-  width: 300px;
-  margin: 50px auto;
-  top: 0;
-  font-size: 15px;
-  font-weight: 300; }
-  .logo-about a {
-    color: #000; }
-  .logo-about p {
-    font-size: 12px; }
-
-.say-hello {
+/* Navigation (just logo maybe animoji) */
+.logo {
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   color: #000;
-  font-size: 30px;
-  margin: 15px;
-  z-index: 99; }
-
-.more-info {
-  z-index: 99;
-  margin: 15px;
+  font-size: 25px;
   padding: 5px;
+  margin: 3px;
+  z-index: 99;
+  font-weight: 300; }
+
+/* About Me */
+.about-me {
+  position: relative;
+  margin: 150px auto;
+  width: 700px;
+  font-size: 40px;
+  line-height: 1.6;
+  /* More About (about footer) */ }
+  .about-me .about-me-star {
+    color: #f9ca24;
+    line-height: 1.3;
+    vertical-align: text-top;
+    font-size: 30px; }
+  .about-me .about-me-number {
+    font-weight: 500;
+    line-height: 1.3;
+    vertical-align: text-top;
+    font-size: 20px; }
+  .about-me .one {
+    color: #e056fd; }
+  .about-me .two {
+    color: #686de0; }
+  .about-me .three {
+    color: #eb4d4b; }
+  .about-me .animoji {
+    display: none; }
+  .about-me .more-info {
+    cursor: pointer;
+    line-height: 1.6;
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    text-align: left; }
+    .about-me .more-info svg {
+      width: 20px;
+      height: 20px; }
+    .about-me .more-info .about-tags {
+      position: absolute;
+      right: 0;
+      width: 500px;
+      display: block;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 2px solid #000;
+      padding: 10px;
+      background-color: #fff;
+      -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
+      .about-me .more-info .about-tags .about-me-star {
+        display: block;
+        color: #f9ca24;
+        line-height: 1.3;
+        vertical-align: text-top;
+        font-size: 0px; }
+      .about-me .more-info .about-tags .about-me-number {
+        font-weight: 500;
+        line-height: 1.3;
+        vertical-align: text-top;
+        font-size: 12px; }
+      .about-me .more-info .about-tags .one {
+        color: #e056fd; }
+      .about-me .more-info .about-tags .two {
+        color: #686de0; }
+      .about-me .more-info .about-tags .three {
+        color: #eb4d4b; }
+  .about-me .view-resume {
+    color: #000;
+    margin: 20px 0;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid #E0E0E0;
+    border-radius: 500px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500; }
+    .about-me .view-resume svg {
+      color: #E0E0E0;
+      vertical-align: sub;
+      width: 20px;
+      height: 20px; }
+    .about-me .view-resume:hover {
+      border: 2px solid #000;
+      color: #000;
+      transition: 0.8s; }
+    .about-me .view-resume:hover > svg {
+      color: #000;
+      transition: 0.8s; }
+
+/* Social Media Links (Top Right Corner) */
+.social-media {
+  padding: 10px;
   position: fixed;
-  bottom: 0;
+  top: 0;
   right: 0;
   font-weight: 300; }
-  .more-info a {
+  .social-media a {
+    text-decoration: underline;
+    margin: 8px;
     font-size: 12px;
-    text-align: right;
-    display: block;
     color: #000; }
+    .social-media a svg {
+      vertical-align: middle;
+      width: 16px;
+      height: 16px; }
 
+/* Footer (Bottom Right Corner) */
 footer {
   z-index: 99;
-  margin: 20px;
+  margin: 10px;
   position: fixed;
   display: block;
+  right: 0;
   bottom: 0;
   font-size: 15px;
   font-weight: 300;
-  color: #b3b3b3; }
+  color: #000; }
 
-.fp {
-  margin: 150px 0;
-  /* Photo background for certain items */ }
-  .fp .proj-description {
-    margin: 30px 0; }
-    .fp .proj-description p {
-      font-size: 15px;
-      font-weight: 500; }
-    .fp .proj-description .proj-tagline {
-      font-size: 12px;
-      font-weight: 300;
-      color: #777777; }
-  .fp .proj-photo-bg {
-    text-align: center;
+/* project list with fancy animations */
+.projects {
+  width: 70%;
+  margin: 50px auto; }
+  .projects .proj-thumb {
     position: relative;
-    border-radius: 5px;
-    background: #F8F8FA;
-    padding: 50px;
-    margin: 10px; }
-    .fp .proj-photo-bg .phone-proj {
-      text-align: center;
-      width: 300px; }
-    .fp .proj-photo-bg .visit-website {
-      display: flex;
-      align-items: center;
+    display: block;
+    margin: 150px 0;
+    color: #000;
+    text-align: center; }
+    .projects .proj-thumb:hover {
+      transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+      -webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .projects .proj-thumb h1 {
+      margin: 5px 0;
+      font-size: 20px;
+      color: #2a2a2a; }
+    .projects .proj-thumb p {
+      font-size: 16px;
+      color: #828282; }
+    .projects .proj-thumb .iphone-thumb {
+      width: 250px; }
+    .projects .proj-thumb .website-shadow {
+      width: 90%;
+      margin: 25px 0;
+      -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
+    .projects .proj-thumb .skill-type {
       position: absolute;
-      margin: 10px;
       top: 0;
       right: 0;
+      font-size: 10px;
+      margin: 5px;
+      color: #fff;
+      background-color: #eb4d4b;
+      padding: 5px;
+      border-radius: 5px 0px 5px 0px; }
+    .projects .proj-thumb .singular-iphone-div {
+      margin: 50px auto;
+      display: flex;
+      justify-content: space-around; }
+      .projects .proj-thumb .singular-iphone-div img {
+        align-self: center; }
+    .projects .proj-thumb .learn-more-btn {
       color: #000;
-      border-radius: 50%;
-      background-color: red; }
-      .fp .proj-photo-bg .visit-website svg {
-        color: #fff;
+      margin: 20px 0;
+      font-size: 16px;
+      padding: 10px 20px;
+      border: 2px solid #E0E0E0;
+      border-radius: 500px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 500; }
+      .projects .proj-thumb .learn-more-btn svg {
+        color: #E0E0E0;
+        vertical-align: sub;
         width: 20px;
         height: 20px; }
-        .fp .proj-photo-bg .visit-website svg:hover {
-          color: #000; }
+      .projects .proj-thumb .learn-more-btn:hover {
+        border: 2px solid #000;
+        color: #000;
+        transition: 0.8s; }
+      .projects .proj-thumb .learn-more-btn:hover > svg {
+        color: #000;
+        transition: 0.8s; }
 
-@media only screen and (max-width: 700px) {
-  .container {
-    width: 90%; }
-
-  .say-hello {
+/* Media Screen 800px */
+@media only screen and (max-width: 800px) {
+  .logo {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     color: #000;
-    font-size: 20px;
-    margin: 15px;
-    z-index: 99; }
+    font-size: 18px;
+    padding: 5px;
+    margin: 8px;
+    z-index: 99;
+    font-weight: 300; }
 
-  .fp {
-    margin: 100px 0;
-    /* Photo background for certain items */ }
-    .fp .proj-description {
-      margin: 30px 0; }
-      .fp .proj-description p {
-        font-size: 12px;
-        font-weight: 500; }
-      .fp .proj-description .proj-tagline {
-        font-size: 10px;
-        font-weight: 300;
-        color: #777777; }
-    .fp .proj-photo-bg {
-      text-align: center;
-      position: relative;
-      border-radius: 5px;
-      background: #F8F8FA;
-      padding: 20px;
-      margin: 5px; }
-      .fp .proj-photo-bg .phone-proj {
-        text-align: center;
-        width: 300px; }
-      .fp .proj-photo-bg .visit-website {
-        display: flex;
-        align-items: center;
+  /* About Me */
+  .about-me {
+    position: relative;
+    margin: 150px auto;
+    width: 65%;
+    font-size: 30px;
+    line-height: 1.6;
+    /* More About (about footer) */ }
+    .about-me .about-me-star {
+      color: #f9ca24;
+      line-height: 1.3;
+      vertical-align: text-top;
+      font-size: 20px; }
+    .about-me .about-me-number {
+      font-weight: 500;
+      line-height: 1.3;
+      vertical-align: text-top;
+      font-size: 15px; }
+    .about-me .one {
+      color: #e056fd; }
+    .about-me .two {
+      color: #686de0; }
+    .about-me .three {
+      color: #eb4d4b; }
+    .about-me .animoji {
+      display: none; }
+    .about-me .more-info {
+      cursor: pointer;
+      line-height: 1.6;
+      z-index: 99;
+      position: absolute;
+      right: 0;
+      top: -20px;
+      text-align: left; }
+      .about-me .more-info svg {
+        width: 15px;
+        height: 15px; }
+      .about-me .more-info .about-tags {
         position: absolute;
-        margin: 5px;
-        top: -10px;
-        right: -10px;
+        right: 0;
+        width: 400px;
+        display: block;
+        font-size: 13px;
+        border-radius: 5px;
+        border: 2px solid #000;
+        padding: 10px;
+        background-color: #fff;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
+        .about-me .more-info .about-tags .about-me-star {
+          display: block;
+          color: #f9ca24;
+          line-height: 1.3;
+          vertical-align: text-top;
+          font-size: 0px; }
+        .about-me .more-info .about-tags .about-me-number {
+          font-weight: 500;
+          line-height: 1.3;
+          vertical-align: text-top;
+          font-size: 10px; }
+        .about-me .more-info .about-tags .one {
+          color: #e056fd; }
+        .about-me .more-info .about-tags .two {
+          color: #686de0; }
+        .about-me .more-info .about-tags .three {
+          color: #eb4d4b; }
+    .about-me .view-resume {
+      color: #000;
+      margin: 20px 0;
+      font-size: 13px;
+      padding: 5px 10px;
+      border: 2px solid #E0E0E0;
+      border-radius: 500px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 500; }
+      .about-me .view-resume svg {
+        color: #E0E0E0;
+        vertical-align: sub;
+        width: 15px;
+        height: 15px; }
+      .about-me .view-resume:hover {
+        border: 2px solid #000;
         color: #000;
-        border-radius: 50%;
-        background-color: red; }
-        .fp .proj-photo-bg .visit-website svg {
-          color: #fff;
+        transition: 0.8s; }
+      .about-me .view-resume:hover > svg {
+        color: #000;
+        transition: 0.8s; }
+
+  /* project list with fancy animations */
+  .projects {
+    width: 100%;
+    margin: 50px auto; }
+    .projects .proj-thumb {
+      position: relative;
+      display: block;
+      margin: 150px 0;
+      color: #000;
+      text-align: center; }
+      .projects .proj-thumb:hover {
+        transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        -webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .projects .proj-thumb h1 {
+        margin: 5px 0;
+        font-size: 15px;
+        color: #2a2a2a; }
+      .projects .proj-thumb p {
+        font-size: 10px;
+        color: #828282; }
+      .projects .proj-thumb .iphone-thumb {
+        width: 250px; }
+      .projects .proj-thumb .website-shadow {
+        width: 90%;
+        margin: 25px 0;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
+      .projects .proj-thumb .skill-type {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 8px;
+        margin: 5px;
+        color: #fff;
+        background-color: #eb4d4b;
+        padding: 3px;
+        border-radius: 5px 0px 5px 0px; }
+      .projects .proj-thumb .singular-iphone-div {
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-around; }
+        .projects .proj-thumb .singular-iphone-div img {
+          align-self: center; }
+      .projects .proj-thumb .learn-more-btn {
+        color: #000;
+        margin: 20px 0;
+        font-size: 13px;
+        padding: 5px 10px;
+        border: 2px solid #E0E0E0;
+        border-radius: 500px;
+        display: inline-block;
+        text-align: center;
+        font-weight: 500; }
+        .projects .proj-thumb .learn-more-btn svg {
+          color: #E0E0E0;
+          vertical-align: sub;
           width: 15px;
           height: 15px; }
-          .fp .proj-photo-bg .visit-website svg:hover {
-            color: #000; } }
+        .projects .proj-thumb .learn-more-btn:hover {
+          border: 2px solid #000;
+          color: #000;
+          transition: 0.8s; }
+        .projects .proj-thumb .learn-more-btn:hover > svg {
+          color: #000;
+          transition: 0.8s; } }
+/* Media Screen 400px */
+@media only screen and (max-width: 500px) {
+  /* About Me */
+  .about-me {
+    position: relative;
+    margin: 150px auto;
+    width: 90%;
+    font-size: 20px;
+    line-height: 1.6;
+    /* More About (about footer) */ }
+    .about-me .more-info {
+      cursor: pointer;
+      line-height: 1.6;
+      z-index: 99;
+      position: absolute;
+      right: 0;
+      top: -20px;
+      text-align: left; }
+      .about-me .more-info svg {
+        width: 15px;
+        height: 15px; }
+      .about-me .more-info .about-tags {
+        position: absolute;
+        right: 0;
+        width: 300px;
+        display: block;
+        font-size: 12px;
+        border-radius: 5px;
+        border: 2px solid #000;
+        padding: 10px;
+        background-color: #fff;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
+        .about-me .more-info .about-tags .about-me-star {
+          display: block;
+          color: #f9ca24;
+          line-height: 1.3;
+          vertical-align: text-top;
+          font-size: 0px; }
+        .about-me .more-info .about-tags .about-me-number {
+          font-weight: 500;
+          line-height: 1.3;
+          vertical-align: text-top;
+          font-size: 8px; }
+        .about-me .more-info .about-tags .one {
+          color: #e056fd; }
+        .about-me .more-info .about-tags .two {
+          color: #686de0; }
+        .about-me .more-info .about-tags .three {
+          color: #eb4d4b; }
+
+  /* project list with fancy animations */
+  .projects {
+    width: 100%;
+    margin: 50px auto; }
+    .projects .proj-thumb {
+      position: relative;
+      display: block;
+      margin: 150px 0;
+      color: #000;
+      text-align: center; }
+      .projects .proj-thumb:hover {
+        transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+        -webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .projects .proj-thumb h1 {
+        margin: 5px 0;
+        font-size: 15px;
+        color: #2a2a2a; }
+      .projects .proj-thumb p {
+        font-size: 10px;
+        color: #828282; }
+      .projects .proj-thumb .iphone-thumb {
+        width: 150px; }
+      .projects .proj-thumb .website-shadow {
+        width: 90%;
+        margin: 25px 0;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
+      .projects .proj-thumb .skill-type {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 8px;
+        margin: 5px;
+        color: #fff;
+        background-color: #eb4d4b;
+        padding: 3px;
+        border-radius: 5px 0px 5px 0px; }
+      .projects .proj-thumb .singular-iphone-div {
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-around; }
+        .projects .proj-thumb .singular-iphone-div img {
+          align-self: center; } }

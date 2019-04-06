@@ -5,212 +5,651 @@
 @import url('https://rsms.me/interface/interface.css');
 
 /* Global Styles */
+
 *{
 	padding: 0;
 	margin: 0;
 	//font-family: Interface, sans-serif;
-	font-family: 'IBM Plex Mono', monospace;
+	font-family: 'IBM Plex Sans', sans-serif;
 }
 
-.container{
-	width: 70%;
-}
+/* Navigation (just logo maybe animoji) */
 
-/* Navigation */
-.logo-about{
-	text-align: center;
-	z-index: 99;
-	width: 300px;
-	margin: 50px auto;
-	top: 0;
-
-	font-size: 15px;
-	font-weight: 300;
-
-	a{
-		color: #000;
-	}
-
-	p{
-		font-size: 12px;
-	}
-}
-
-.say-hello{
+.logo {
 	position: fixed;
 	top: 0;
-	right: 0;
+	left: 0;
 	color: #000;
-	font-size: 30px;
-	margin: 15px;
+	font-size: 25px;
+	padding: 5px;
+	margin: 3px;
 	z-index: 99;	
+	font-weight: 300;
 }
 
-.more-info{
-	z-index: 99;
-	margin: 15px;
-	padding: 5px;
+/* About Me */
+.about-me {
+	position: relative;
+	margin: 150px auto;
+	width: 700px;
+	font-size: 40px;
+	line-height: 1.6;
+
+	.about-me-star { 
+		color: #f9ca24;
+		line-height: 1.3;
+		vertical-align: text-top;
+		font-size: 30px;
+	}
+
+	.about-me-number {
+		font-weight: 500;
+		line-height: 1.3;
+		vertical-align: text-top;
+		font-size: 20px;
+	}
+
+	.one {
+		color: #e056fd;
+	}
+
+	.two {
+		color: #686de0;
+	}	
+
+	.three {
+		color: #eb4d4b;
+	}
+
+	.animoji {
+		display: none;
+	}
+
+		/* More About (about footer) */
+	.more-info {
+		cursor: pointer;
+		line-height: 1.6;
+		z-index: 99;
+		position: absolute;
+		right: 0;
+		top: -20px;
+		text-align: left;
+
+		svg {
+			width: 20px;
+			height: 20px;
+		}
+
+		.about-tags {
+			position: absolute;
+			right: 0;
+			width: 500px;
+			display: block;
+			font-size: 16px;
+			border-radius: 5px;
+			border: 2px solid #000;
+			padding: 10px;
+			background-color: #fff;
+			-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+			box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+
+			.about-me-star {
+				display: block;
+				color: #f9ca24;
+				line-height: 1.3;
+				vertical-align: text-top;
+				font-size: 0px;
+			}
+
+			.about-me-number {
+				font-weight: 500;
+				line-height: 1.3;
+				vertical-align: text-top;
+				font-size: 12px;
+			}
+
+			.one {
+				color: #e056fd;
+			}
+
+			.two {
+				color: #686de0;
+			}	
+
+			.three {
+				color: #eb4d4b;
+			}
+		}
+	}
+
+	.view-resume {
+		color: #000;
+		margin: 20px 0;
+		font-size: 16px;
+		padding: 10px 20px;
+		border: 2px solid #E0E0E0;
+		border-radius: 500px;
+		display: inline-block;
+		text-align: center;
+		font-weight: 500;
+
+		svg {
+			color: #E0E0E0;
+			vertical-align: sub;
+			width: 20px;
+			height: 20px;
+		}
+
+		&:hover {
+			border: 2px solid #000;
+			color: #000;
+			transition: 0.8s;
+		}
+
+		&:hover > svg {
+			color: #000;
+			transition: 0.8s;
+		}
+	}
+
+}
+
+/* Social Media Links (Top Right Corner) */
+.social-media {
+	padding: 10px;
 	position: fixed;
-	bottom: 0;
+	top: 0;
 	right: 0;
 	font-weight: 300;
 	
-	a{
+	a {
+		//display: block;
+		text-decoration: underline;
+		margin: 8px;
 		font-size: 12px;
-		text-align: right;
-		display: block;
 		color: #000;
+
+		svg {
+			vertical-align: middle;
+			width: 16px;
+			height: 16px;
+		}
 	}
 
 }
 
-footer{
+/* Footer (Bottom Right Corner) */
+footer {
 	z-index: 99;
-	margin: 20px;
+	margin: 10px;
 	position: fixed;
 	display: block;
+	right: 0;
 	bottom: 0;
 	font-size: 15px;
 	font-weight: 300;
-	color: #b3b3b3;
+	color: #000;
 }
 
-.fp{
-	margin: 150px 0;
+/* project list with fancy animations */
+.projects {
+	width: 70%;
+	margin: 50px auto;
 
-	.proj-description{
-		margin: 30px 0;
-
-		p{
-			font-size: 15px;
-			font-weight: 500;
-		}
-
-		.proj-tagline{
-			font-size: 12px;
-			font-weight: 300;
-			color: #777777;
-		}
-	}
-	
-	/* Photo background for certain items */
-	.proj-photo-bg{
-		text-align: center;
+	.proj-thumb {
 		position: relative;
-		border-radius: 5px;
-		background: #F8F8FA;
-		padding: 50px;
-		margin: 10px;
+		display: block;
+		margin: 150px 0;
+		color: #000;
+		text-align: center;
 
-		.phone-proj{
-			text-align: center;
-			width: 300px;
+		&:hover {
+			transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+			-webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 		}
 
-		.visit-website{
-			display: flex;
-			align-items: center;
+		h1 {
+			margin: 5px 0;
+			font-size: 20px;
+			color: #2a2a2a;
+		}
+
+		p {
+			font-size: 16px;
+			color: #828282;
+		}
+		
+		.iphone-thumb {
+			width: 250px;
+		}
+
+		.website-shadow{
+			width: 90%;
+			margin: 25px 0;
+			-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+			box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+		}
+
+		.skill-type {
 			position: absolute;
-			margin: 10px;
 			top: 0;
 			right: 0;
-			color: #000;
-			border-radius: 50%;
-			background-color: red;
+			font-size: 10px;
+			margin: 5px;
+			color: #fff;
+			background-color: #eb4d4b;
+			padding: 5px;
+			border-radius: 5px 0px 5px 0px;
+		}
 
-			svg{
-				color: #fff;
+		.singular-iphone-div {
+			margin: 50px auto;
+			display: flex;
+			justify-content: space-around;
+
+			img {
+				align-self: center;
+			}
+		}
+
+		.learn-more-btn {
+			color: #000;
+			margin: 20px 0;
+			font-size: 16px;
+			padding: 10px 20px;
+			border: 2px solid #E0E0E0;
+			border-radius: 500px;
+			display: inline-block;
+			text-align: center;
+			font-weight: 500;
+
+			svg {
+				color: #E0E0E0;
+				vertical-align: sub;
 				width: 20px;
 				height: 20px;
+			}
 
-				&:hover{
-					color: #000;
-				}
+			&:hover {
+				border: 2px solid #000;
+				color: #000;
+				transition: 0.8s;
+			}
+
+			&:hover > svg {
+				color: #000;
+				transition: 0.8s;
 			}
 		}
 	}
 }
 
 
-
-
-
-
-
-@media only screen and (max-width: 700px) {
-
-.container{
-	width: 90%;
-}
-
-.say-hello{
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: #000;
-	font-size: 20px;
-	margin: 15px;
-	z-index: 99;	
-}
-
-.fp{
-	margin: 100px 0;
-
-	.proj-description{
-		margin: 30px 0;
-
-		p{
-			font-size: 12px;
-			font-weight: 500;
-		}
-
-		.proj-tagline{
-			font-size: 10px;
-			font-weight: 300;
-			color: #777777;
-		}
+/* Media Screen 800px */
+@media only screen and (max-width: 800px) {
+	.logo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		color: #000;
+		font-size: 18px;
+		padding: 5px;
+		margin: 8px;
+		z-index: 99;	
+		font-weight: 300;
 	}
 	
-	/* Photo background for certain items */
-	.proj-photo-bg{
-		text-align: center;
+	/* About Me */
+	.about-me {
 		position: relative;
-		border-radius: 5px;
-		background: #F8F8FA;
-		padding: 20px;
-		margin: 5px;
+		margin: 150px auto;
+		width: 65%;
+		font-size: 30px;
+		line-height: 1.6;
 
-		.phone-proj{
-			text-align: center;
-			width: 300px;
+		.about-me-star { 
+			color: #f9ca24;
+			line-height: 1.3;
+			vertical-align: text-top;
+			font-size: 20px;
 		}
 
-		.visit-website{
-			display: flex;
-			align-items: center;
-			position: absolute;
-			margin: 5px;
-			top: -10px;
-			right: -10px;
-			color: #000;
-			border-radius: 50%;
-			background-color: red;
+		.about-me-number {
+			font-weight: 500;
+			line-height: 1.3;
+			vertical-align: text-top;
+			font-size: 15px;
+		}
 
-			svg{
-				color: #fff;
+		.one {
+			color: #e056fd;
+		}
+
+		.two {
+			color: #686de0;
+		}	
+
+		.three {
+			color: #eb4d4b;
+		}
+
+		.animoji {
+			display: none;
+		}
+
+			/* More About (about footer) */
+		.more-info {
+			cursor: pointer;
+			line-height: 1.6;
+			z-index: 99;
+			position: absolute;
+			right: 0;
+			top: -20px;
+			text-align: left;
+
+			svg {
 				width: 15px;
 				height: 15px;
+			}
 
-				&:hover{
+			.about-tags {
+				position: absolute;
+				right: 0;
+				width: 400px;
+				display: block;
+				font-size: 13px;
+				border-radius: 5px;
+				border: 2px solid #000;
+				padding: 10px;
+				background-color: #fff;
+				-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+				box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+
+				.about-me-star {
+					display: block;
+					color: #f9ca24;
+					line-height: 1.3;
+					vertical-align: text-top;
+					font-size: 0px;
+				}
+
+				.about-me-number {
+					font-weight: 500;
+					line-height: 1.3;
+					vertical-align: text-top;
+					font-size: 10px;
+				}
+
+				.one {
+					color: #e056fd;
+				}
+
+				.two {
+					color: #686de0;
+				}	
+
+				.three {
+					color: #eb4d4b;
+				}
+			}
+		}
+
+		.view-resume {
+			color: #000;
+			margin: 20px 0;
+			font-size: 13px;
+			padding: 5px 10px;
+			border: 2px solid #E0E0E0;
+			border-radius: 500px;
+			display: inline-block;
+			text-align: center;
+			font-weight: 500;
+
+			svg {
+				color: #E0E0E0;
+				vertical-align: sub;
+				width: 15px;
+				height: 15px;
+			}
+
+			&:hover {
+				border: 2px solid #000;
+				color: #000;
+				transition: 0.8s;
+			}
+
+			&:hover > svg {
+				color: #000;
+				transition: 0.8s;
+			}
+		}
+
+	}
+
+	/* project list with fancy animations */
+	.projects {
+		width: 100%;
+		margin: 50px auto;
+
+		.proj-thumb {
+			position: relative;
+			display: block;
+			margin: 150px 0;
+			color: #000;
+			text-align: center;
+
+			&:hover {
+				transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+				-webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+
+			h1 {
+				margin: 5px 0;
+				font-size: 15px;
+				color: #2a2a2a;
+			}
+
+			p {
+				font-size: 10px;
+				color: #828282;
+			}
+			
+			.iphone-thumb {
+				width: 250px;
+			}
+
+			.website-shadow{
+				width: 90%;
+				margin: 25px 0;
+				-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+				box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+			}
+
+			.skill-type {
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: 8px;
+				margin: 5px;
+				color: #fff;
+				background-color: #eb4d4b;
+				padding: 3px;
+				border-radius: 5px 0px 5px 0px;
+			}
+
+			.singular-iphone-div {
+				margin: 50px auto;
+				display: flex;
+				justify-content: space-around;
+
+				img {
+					align-self: center;
+				}
+			}
+
+			.learn-more-btn {
+				color: #000;
+				margin: 20px 0;
+				font-size: 13px;
+				padding: 5px 10px;
+				border: 2px solid #E0E0E0;
+				border-radius: 500px;
+				display: inline-block;
+				text-align: center;
+				font-weight: 500;
+
+				svg {
+					color: #E0E0E0;
+					vertical-align: sub;
+					width: 15px;
+					height: 15px;
+				}
+
+				&:hover {
+					border: 2px solid #000;
 					color: #000;
+					transition: 0.8s;
+				}
+
+				&:hover > svg {
+					color: #000;
+					transition: 0.8s;
 				}
 			}
 		}
 	}
 }
 
+/* Media Screen 400px */
+@media only screen and (max-width: 500px) {	
+	/* About Me */
+	.about-me {
+		position: relative;
+		margin: 150px auto;
+		width: 90%;
+		font-size: 20px;
+		line-height: 1.6;
 
+		/* More About (about footer) */
+		.more-info {
+			cursor: pointer;
+			line-height: 1.6;
+			z-index: 99;
+			position: absolute;
+			right: 0;
+			top: -20px;
+			text-align: left;
 
+			svg {
+				width: 15px;
+				height: 15px;
+			}
+
+			.about-tags {
+				position: absolute;
+				right: 0;
+				width: 300px;
+				display: block;
+				font-size: 12px;
+				border-radius: 5px;
+				border: 2px solid #000;
+				padding: 10px;
+				background-color: #fff;
+				-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+				box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+
+				.about-me-star {
+					display: block;
+					color: #f9ca24;
+					line-height: 1.3;
+					vertical-align: text-top;
+					font-size: 0px;
+				}
+
+				.about-me-number {
+					font-weight: 500;
+					line-height: 1.3;
+					vertical-align: text-top;
+					font-size: 8px;
+				}
+
+				.one {
+					color: #e056fd;
+				}
+
+				.two {
+					color: #686de0;
+				}	
+
+				.three {
+					color: #eb4d4b;
+				}
+			}
+		}
+	}
+
+	/* project list with fancy animations */
+	.projects {
+		width: 100%;
+		margin: 50px auto;
+
+		.proj-thumb {
+			position: relative;
+			display: block;
+			margin: 150px 0;
+			color: #000;
+			text-align: center;
+
+			&:hover {
+				transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+				-webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+			}
+
+			h1 {
+				margin: 5px 0;
+				font-size: 15px;
+				color: #2a2a2a;
+			}
+
+			p {
+				font-size: 10px;
+				color: #828282;
+			}
+			
+			.iphone-thumb {
+				width: 150px;
+			}
+
+			.website-shadow{
+				width: 90%;
+				margin: 25px 0;
+				-webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+				box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+			}
+
+			.skill-type {
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: 8px;
+				margin: 5px;
+				color: #fff;
+				background-color: #eb4d4b;
+				padding: 3px;
+				border-radius: 5px 0px 5px 0px;
+			}
+
+			.singular-iphone-div {
+				margin: 50px auto;
+				display: flex;
+				justify-content: space-around;
+
+				img {
+					align-self: center;
+				}
+			}
+		}
+	}
 }
 
 
