@@ -1,464 +1,325 @@
-@import url("https://rsms.me/interface/interface.css");
 /* Global Styles */
 * {
   padding: 0;
   margin: 0;
   font-family: 'IBM Plex Sans', sans-serif; }
 
-/* Navigation (just logo maybe animoji) */
-.logo {
+.menu-btn {
+  cursor: pointer;
+  z-index: 999;
   position: fixed;
   top: 0;
-  left: 0;
-  color: #000;
-  font-size: 25px;
-  padding: 5px;
-  margin: 3px;
-  z-index: 99;
-  font-weight: 300; }
+  right: 0;
+  margin: 15px;
+  background-color: #000;
+  border-radius: 100px;
+  height: 25px;
+  width: 25px; }
+  .menu-btn:hover {
+    transform: scale(1.4);
+    transition: all 1s; }
+  .menu-btn svg {
+    padding: 5px;
+    color: #fff; }
 
-/* About Me */
+.menu {
+  display: none;
+  z-index: 998;
+  position: fixed;
+  color: #fff;
+  background-color: #000;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  padding: 10px; }
+  .menu a {
+    text-decoration: underline;
+    margin: 5px;
+    display: inline-block;
+    text-transform: lowercase;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300; }
+    .menu a:hover {
+      color: #fff; }
+    .menu a svg {
+      height: 15px;
+      width: 15px; }
+
 .about-me {
-  position: relative;
-  margin: 150px auto;
-  width: 700px;
-  font-size: 40px;
-  line-height: 1.6;
-  /* More About (about footer) */ }
-  .about-me .about-me-star {
-    color: #f9ca24;
-    line-height: 1.3;
-    vertical-align: text-top;
-    font-size: 30px; }
-  .about-me .about-me-number {
-    font-weight: 500;
-    line-height: 1.3;
-    vertical-align: text-top;
-    font-size: 20px; }
-  .about-me .one {
-    color: #e056fd; }
-  .about-me .two {
-    color: #686de0; }
-  .about-me .three {
-    color: #eb4d4b; }
-  .about-me .animoji {
-    display: none; }
-  .about-me .more-info {
-    cursor: pointer;
-    line-height: 1.6;
-    z-index: 99;
-    position: absolute;
-    right: 0;
-    top: -20px;
-    text-align: left; }
-    .about-me .more-info svg {
-      width: 20px;
-      height: 20px; }
-    .about-me .more-info .about-tags {
-      position: absolute;
-      right: 0;
+  color: #000;
+  width: 100%;
+  margin: 100px auto 100px auto;
+  font-size: 50px;
+  font-weight: 300; }
+  .about-me span {
+    position: relative;
+    cursor: crosshair;
+    border-bottom: 2px dashed #000; }
+    .about-me span:hover > img {
+      visibility: visible; }
+    .about-me span img {
+      z-index: 99;
+      position: fixed;
+      visibility: hidden;
+      margin: 30px;
       width: 500px;
-      display: block;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 2px solid #000;
-      padding: 10px;
+      right: 50px;
+      bottom: 50px; }
+  .about-me a {
+    vertical-align: middle;
+    color: #fff;
+    margin: 20px auto;
+    font-size: 18px;
+    background-color: #000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 300;
+    border: 1px solid; }
+    .about-me a:hover {
       background-color: #fff;
-      -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
-      .about-me .more-info .about-tags .about-me-star {
-        display: block;
-        color: #f9ca24;
-        line-height: 1.3;
-        vertical-align: text-top;
-        font-size: 0px; }
-      .about-me .more-info .about-tags .about-me-number {
-        font-weight: 500;
-        line-height: 1.3;
-        vertical-align: text-top;
-        font-size: 12px; }
-      .about-me .more-info .about-tags .one {
-        color: #e056fd; }
-      .about-me .more-info .about-tags .two {
-        color: #686de0; }
-      .about-me .more-info .about-tags .three {
-        color: #eb4d4b; }
-  .about-me .view-resume {
-    color: #000;
-    margin: 20px 0;
+      color: #000;
+      border: 1px solid; }
+    .about-me a:hover > svg {
+      background-color: #000;
+      color: #fff; }
+    .about-me a svg {
+      padding: 2px;
+      vertical-align: middle;
+      margin-left: 5px;
+      background-color: #fff;
+      border-radius: 30px;
+      color: #000;
+      width: 18px;
+      height: 18px; }
+
+.proj-thumb {
+  padding: 25px 0;
+  text-align: center; }
+  .proj-thumb:hover > img {
+    transform: scale(1.05);
+    transition: all 0.7s; }
+  .proj-thumb img {
+    padding: 20px; }
+  .proj-thumb h1 {
+    color: #333335;
+    font-size: 35px;
+    padding: 5px 0;
+    font-weight: 500; }
+  .proj-thumb h3 {
+    color: #969696;
     font-size: 16px;
+    letter-spacing: 0.2px;
+    font-weight: 300; }
+
+.case-study {
+  text-align: center; }
+  .case-study img {
+    margin: 20px auto 20px auto; }
+  .case-study h1 {
+    letter-spacing: 0.5px;
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: #fff; }
+  .case-study h2 {
+    text-align: left;
+    margin: 20px auto 20px auto;
+    width: 700px;
+    color: #333335;
+    font-size: 25px;
+    letter-spacing: 0.2px;
+    font-weight: 700; }
+  .case-study p {
+    text-align: left;
+    margin: 20px auto 20px auto;
+    width: 700px;
+    font-size: 23px;
+    letter-spacing: 0.2px;
+    font-weight: 400; }
+  .case-study .coming-soon {
+    padding: 100px 0; }
+  .case-study .inline-photo-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .case-study .inline-photo-gallery img {
+      border-radius: 5px;
+      padding: 30px;
+      background: #f5f5f5; }
+  .case-study .view-site {
+    color: #000;
+    margin: 20px auto;
+    font-size: 18px;
     padding: 10px 20px;
     border: 2px solid #E0E0E0;
     border-radius: 500px;
     display: inline-block;
     text-align: center;
-    font-weight: 500; }
-    .about-me .view-resume svg {
+    font-weight: 400; }
+    .case-study .view-site svg {
       color: #E0E0E0;
       vertical-align: sub;
       width: 20px;
       height: 20px; }
-    .about-me .view-resume:hover {
+    .case-study .view-site:hover {
       border: 2px solid #000;
       color: #000;
       transition: 0.8s; }
-    .about-me .view-resume:hover > svg {
+    .case-study .view-site:hover > svg {
       color: #000;
       transition: 0.8s; }
 
-/* Social Media Links (Top Right Corner) */
-.social-media {
-  padding: 10px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  font-weight: 300; }
-  .social-media a {
-    text-decoration: underline;
-    margin: 8px;
-    font-size: 12px;
-    color: #000; }
-    .social-media a svg {
-      vertical-align: middle;
-      width: 16px;
-      height: 16px; }
-
-/* Footer (Bottom Right Corner) */
 footer {
-  z-index: 99;
-  margin: 10px;
-  position: fixed;
-  display: block;
-  right: 0;
-  bottom: 0;
+  font-weight: 500;
+  vertical-align: middle;
+  text-align: center;
+  padding: 25px 0;
   font-size: 15px;
-  font-weight: 300;
   color: #000; }
+  footer svg {
+    color: red;
+    height: 10px;
+    width: 10px;
+    vertical-align: middle; }
 
-/* project list with fancy animations */
-.projects {
-  width: 70%;
-  margin: 50px auto; }
-  .projects .proj-thumb {
-    position: relative;
-    display: block;
-    margin: 150px 0;
-    color: #000;
-    text-align: center; }
-    .projects .proj-thumb:hover {
-      transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-      -webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1); }
-    .projects .proj-thumb h1 {
-      margin: 5px 0;
-      font-size: 20px;
-      color: #2a2a2a; }
-    .projects .proj-thumb p {
-      font-size: 16px;
-      color: #828282; }
-    .projects .proj-thumb .iphone-thumb {
-      width: 250px; }
-    .projects .proj-thumb .website-shadow {
-      width: 90%;
-      margin: 25px 0;
-      -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
-    .projects .proj-thumb .skill-type {
-      position: absolute;
-      top: 0;
-      right: 0;
-      font-size: 10px;
+/* Media Query */
+@media only screen and (max-width: 800px) {
+  .menu {
+    z-index: 998;
+    position: fixed;
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    padding: 10px; }
+    .menu a {
+      text-decoration: underline;
       margin: 5px;
+      display: inline-block;
+      text-transform: lowercase;
       color: #fff;
-      background-color: #eb4d4b;
-      padding: 5px;
-      border-radius: 5px 0px 5px 0px; }
-    .projects .proj-thumb .singular-iphone-div {
-      margin: 50px auto;
+      font-size: 15px;
+      font-weight: 300; }
+      .menu a:hover {
+        color: #fff; }
+      .menu a svg {
+        height: 10px;
+        width: 10px; }
+
+  .about-me {
+    width: 100%;
+    margin: 100px auto 100px auto;
+    font-size: 20px;
+    font-weight: 300; }
+    .about-me span {
+      cursor: crosshair;
+      border-bottom: 1px dashed #000; }
+    .about-me a {
+      vertical-align: middle;
+      color: #fff;
+      margin: 10px auto;
+      font-size: 14px;
+      background-color: #000;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: inline-block;
+      text-align: center;
+      font-weight: 300;
+      border: 1px solid; }
+      .about-me a:hover {
+        background-color: #fff;
+        color: #000;
+        border: 1px solid; }
+      .about-me a:hover > svg {
+        background-color: #000;
+        color: #fff; }
+      .about-me a svg {
+        padding: 2px;
+        vertical-align: middle;
+        margin-left: 5px;
+        background-color: #fff;
+        border-radius: 30px;
+        color: #000;
+        width: 15px;
+        height: 15px; }
+
+  .proj-thumb {
+    padding: 15px 0;
+    text-align: center; }
+    .proj-thumb:hover > img {
+      transform: scale(1.05);
+      transition: all 0.7s; }
+    .proj-thumb img {
+      padding: 10px; }
+    .proj-thumb h1 {
+      color: #333335;
+      font-size: 25px;
+      padding: 5px 0;
+      font-weight: 500; }
+    .proj-thumb h3 {
+      color: #969696;
+      font-size: 13px;
+      letter-spacing: 0.2px;
+      font-weight: 300; }
+
+  .case-study {
+    text-align: center; }
+    .case-study img {
+      margin: 20px auto 20px auto; }
+    .case-study h2 {
+      text-align: left;
+      margin: 20px auto 20px auto;
+      width: 100%;
+      color: #333335;
+      font-size: 20px;
+      letter-spacing: 0.2px;
+      font-weight: 700; }
+    .case-study p {
+      text-align: left;
+      margin: 20px auto 20px auto;
+      width: 100%;
+      font-size: 15px;
+      letter-spacing: 0.2px;
+      font-weight: 400; }
+    .case-study .coming-soon {
+      padding: 100px 0; }
+    .case-study .inline-photo-gallery {
       display: flex;
-      justify-content: space-around; }
-      .projects .proj-thumb .singular-iphone-div img {
-        align-self: center; }
-    .projects .proj-thumb .learn-more-btn {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
+      .case-study .inline-photo-gallery img {
+        border-radius: 5px;
+        padding: 10px;
+        background: #f5f5f5; }
+    .case-study .view-site {
       color: #000;
-      margin: 20px 0;
+      margin: 10px auto;
       font-size: 16px;
       padding: 10px 20px;
       border: 2px solid #E0E0E0;
       border-radius: 500px;
       display: inline-block;
       text-align: center;
-      font-weight: 500; }
-      .projects .proj-thumb .learn-more-btn svg {
+      font-weight: 400; }
+      .case-study .view-site svg {
         color: #E0E0E0;
         vertical-align: sub;
         width: 20px;
         height: 20px; }
-      .projects .proj-thumb .learn-more-btn:hover {
+      .case-study .view-site:hover {
         border: 2px solid #000;
         color: #000;
         transition: 0.8s; }
-      .projects .proj-thumb .learn-more-btn:hover > svg {
+      .case-study .view-site:hover > svg {
         color: #000;
-        transition: 0.8s; }
-
-/* Media Screen 800px */
-@media only screen and (max-width: 800px) {
-  .logo {
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: #000;
-    font-size: 18px;
-    padding: 5px;
-    margin: 8px;
-    z-index: 99;
-    font-weight: 300; }
-
-  /* About Me */
-  .about-me {
-    position: relative;
-    margin: 150px auto;
-    width: 65%;
-    font-size: 30px;
-    line-height: 1.6;
-    /* More About (about footer) */ }
-    .about-me .about-me-star {
-      color: #f9ca24;
-      line-height: 1.3;
-      vertical-align: text-top;
-      font-size: 20px; }
-    .about-me .about-me-number {
-      font-weight: 500;
-      line-height: 1.3;
-      vertical-align: text-top;
-      font-size: 15px; }
-    .about-me .one {
-      color: #e056fd; }
-    .about-me .two {
-      color: #686de0; }
-    .about-me .three {
-      color: #eb4d4b; }
-    .about-me .animoji {
-      display: none; }
-    .about-me .more-info {
-      cursor: pointer;
-      line-height: 1.6;
-      z-index: 99;
-      position: absolute;
-      right: 0;
-      top: -20px;
-      text-align: left; }
-      .about-me .more-info svg {
-        width: 15px;
-        height: 15px; }
-      .about-me .more-info .about-tags {
-        position: absolute;
-        right: 0;
-        width: 400px;
-        display: block;
-        font-size: 13px;
-        border-radius: 5px;
-        border: 2px solid #000;
-        padding: 10px;
-        background-color: #fff;
-        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
-        .about-me .more-info .about-tags .about-me-star {
-          display: block;
-          color: #f9ca24;
-          line-height: 1.3;
-          vertical-align: text-top;
-          font-size: 0px; }
-        .about-me .more-info .about-tags .about-me-number {
-          font-weight: 500;
-          line-height: 1.3;
-          vertical-align: text-top;
-          font-size: 10px; }
-        .about-me .more-info .about-tags .one {
-          color: #e056fd; }
-        .about-me .more-info .about-tags .two {
-          color: #686de0; }
-        .about-me .more-info .about-tags .three {
-          color: #eb4d4b; }
-    .about-me .view-resume {
-      color: #000;
-      margin: 20px 0;
-      font-size: 13px;
-      padding: 5px 10px;
-      border: 2px solid #E0E0E0;
-      border-radius: 500px;
-      display: inline-block;
-      text-align: center;
-      font-weight: 500; }
-      .about-me .view-resume svg {
-        color: #E0E0E0;
-        vertical-align: sub;
-        width: 15px;
-        height: 15px; }
-      .about-me .view-resume:hover {
-        border: 2px solid #000;
-        color: #000;
-        transition: 0.8s; }
-      .about-me .view-resume:hover > svg {
-        color: #000;
-        transition: 0.8s; }
-
-  /* project list with fancy animations */
-  .projects {
-    width: 100%;
-    margin: 50px auto; }
-    .projects .proj-thumb {
-      position: relative;
-      display: block;
-      margin: 150px 0;
-      color: #000;
-      text-align: center; }
-      .projects .proj-thumb:hover {
-        transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-        -webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1); }
-      .projects .proj-thumb h1 {
-        margin: 5px 0;
-        font-size: 15px;
-        color: #2a2a2a; }
-      .projects .proj-thumb p {
-        font-size: 10px;
-        color: #828282; }
-      .projects .proj-thumb .iphone-thumb {
-        width: 250px; }
-      .projects .proj-thumb .website-shadow {
-        width: 90%;
-        margin: 25px 0;
-        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
-      .projects .proj-thumb .skill-type {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 8px;
-        margin: 5px;
-        color: #fff;
-        background-color: #eb4d4b;
-        padding: 3px;
-        border-radius: 5px 0px 5px 0px; }
-      .projects .proj-thumb .singular-iphone-div {
-        margin: 50px auto;
-        display: flex;
-        justify-content: space-around; }
-        .projects .proj-thumb .singular-iphone-div img {
-          align-self: center; }
-      .projects .proj-thumb .learn-more-btn {
-        color: #000;
-        margin: 20px 0;
-        font-size: 13px;
-        padding: 5px 10px;
-        border: 2px solid #E0E0E0;
-        border-radius: 500px;
-        display: inline-block;
-        text-align: center;
-        font-weight: 500; }
-        .projects .proj-thumb .learn-more-btn svg {
-          color: #E0E0E0;
-          vertical-align: sub;
-          width: 15px;
-          height: 15px; }
-        .projects .proj-thumb .learn-more-btn:hover {
-          border: 2px solid #000;
-          color: #000;
-          transition: 0.8s; }
-        .projects .proj-thumb .learn-more-btn:hover > svg {
-          color: #000;
-          transition: 0.8s; } }
-/* Media Screen 400px */
-@media only screen and (max-width: 500px) {
-  /* About Me */
-  .about-me {
-    position: relative;
-    margin: 150px auto;
-    width: 90%;
-    font-size: 20px;
-    line-height: 1.6;
-    /* More About (about footer) */ }
-    .about-me .more-info {
-      cursor: pointer;
-      line-height: 1.6;
-      z-index: 99;
-      position: absolute;
-      right: 0;
-      top: -20px;
-      text-align: left; }
-      .about-me .more-info svg {
-        width: 15px;
-        height: 15px; }
-      .about-me .more-info .about-tags {
-        position: absolute;
-        right: 0;
-        width: 300px;
-        display: block;
-        font-size: 12px;
-        border-radius: 5px;
-        border: 2px solid #000;
-        padding: 10px;
-        background-color: #fff;
-        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
-        .about-me .more-info .about-tags .about-me-star {
-          display: block;
-          color: #f9ca24;
-          line-height: 1.3;
-          vertical-align: text-top;
-          font-size: 0px; }
-        .about-me .more-info .about-tags .about-me-number {
-          font-weight: 500;
-          line-height: 1.3;
-          vertical-align: text-top;
-          font-size: 8px; }
-        .about-me .more-info .about-tags .one {
-          color: #e056fd; }
-        .about-me .more-info .about-tags .two {
-          color: #686de0; }
-        .about-me .more-info .about-tags .three {
-          color: #eb4d4b; }
-
-  /* project list with fancy animations */
-  .projects {
-    width: 100%;
-    margin: 50px auto; }
-    .projects .proj-thumb {
-      position: relative;
-      display: block;
-      margin: 150px 0;
-      color: #000;
-      text-align: center; }
-      .projects .proj-thumb:hover {
-        transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1);
-        -webkit-transition: all 1.2s cubic-bezier(0.075, 0.82, 0.165, 1); }
-      .projects .proj-thumb h1 {
-        margin: 5px 0;
-        font-size: 15px;
-        color: #2a2a2a; }
-      .projects .proj-thumb p {
-        font-size: 10px;
-        color: #828282; }
-      .projects .proj-thumb .iphone-thumb {
-        width: 150px; }
-      .projects .proj-thumb .website-shadow {
-        width: 90%;
-        margin: 25px 0;
-        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
-        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.2); }
-      .projects .proj-thumb .skill-type {
-        position: absolute;
-        top: 0;
-        right: 0;
-        font-size: 8px;
-        margin: 5px;
-        color: #fff;
-        background-color: #eb4d4b;
-        padding: 3px;
-        border-radius: 5px 0px 5px 0px; }
-      .projects .proj-thumb .singular-iphone-div {
-        margin: 50px auto;
-        display: flex;
-        justify-content: space-around; }
-        .projects .proj-thumb .singular-iphone-div img {
-          align-self: center; } }
+        transition: 0.8s; } }

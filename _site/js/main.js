@@ -1,9 +1,11 @@
 jQuery(document).ready(function($) {
- 
-    $('.info-btn').click(function(){
-		$('.about-tags').toggle();
-    });
 
+	$('.menu').hide();
+
+    $('.menu-btn').click(function(){
+    	$('.menu-btn').css("background-color: #fff");
+		$('.menu').toggle();
+    });
 
 });
 
