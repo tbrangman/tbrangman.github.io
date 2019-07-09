@@ -1,11 +1,13 @@
 jQuery(document).ready(function($) {
 
-	$('.menu').hide();
+	/* Profile/menu open and close */
+	$('.profile-btn').click(function() {
+		$('.profile').css('display','block');
+	});
 
-    $('.menu-btn').click(function(){
-    	$('.menu-btn').css("background-color: #fff");
-		$('.menu').toggle();
-    });
+	$('.exit-menu').click(function() {
+		$('.profile').css('display','none');
+	});
 
 });
 
