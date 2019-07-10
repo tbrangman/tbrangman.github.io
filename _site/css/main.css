@@ -74,6 +74,8 @@ body {
   justify-content: center;
   align-items: center;
   align-content: center; }
+  .projectContainer .column img {
+    width: 100%; }
 
 /* Media Query Tablet */
 @media only screen and (max-width: 800px) {
