@@ -136,3 +136,28 @@ body {
   }
 }
 
+/* Media Query Mobile */
+@media only screen and (max-width: 400px) {
+  
+  .header {
+  	padding: 20px 0;
+
+  	.name {
+  		font-size: 13px;
+  	}
+
+  	a {
+  		svg {
+  			height: 13px;
+  			width: 13px;
+  		}
+  	}
+  }
+
+  .projectContainer {
+  	.column {
+  		padding: 20px;
+  	}
+  }
+}
+
