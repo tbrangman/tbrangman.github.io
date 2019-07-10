@@ -1,4 +1,4 @@
-jQuery(document).ready(function($) {
+$(document).ready(function() {
 
 	/* Profile/menu open and close */
 	$('.profile-btn').click(function() {

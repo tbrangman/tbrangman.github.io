@@ -12,7 +12,7 @@ body {
   height: 100vh; }
 
 .header {
-  padding: 20px 0;
+  padding: 30px 0;
   font-weight: 400; }
   .header .name {
     color: #000;
@@ -75,68 +75,7 @@ body {
   align-items: center;
   align-content: center; }
 
-.case-study {
-  text-align: center; }
-  .case-study img {
-    margin: 20px auto 20px auto; }
-  .case-study h1 {
-    letter-spacing: 0.5px;
-    font-size: 50px;
-    font-weight: 700;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    color: #fff; }
-  .case-study h2 {
-    text-align: left;
-    margin: 20px auto 20px auto;
-    width: 700px;
-    color: #333335;
-    font-size: 25px;
-    letter-spacing: 0.2px;
-    font-weight: 700; }
-  .case-study p {
-    text-align: left;
-    margin: 20px auto 20px auto;
-    width: 700px;
-    font-size: 23px;
-    letter-spacing: 0.2px;
-    font-weight: 400; }
-  .case-study .coming-soon {
-    padding: 100px 0; }
-  .case-study .inline-photo-gallery {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center; }
-    .case-study .inline-photo-gallery img {
-      border-radius: 5px;
-      padding: 30px;
-      background: #f5f5f5; }
-  .case-study .view-site {
-    color: #000;
-    margin: 20px auto;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: 2px solid #E0E0E0;
-    border-radius: 500px;
-    display: inline-block;
-    text-align: center;
-    font-weight: 400; }
-    .case-study .view-site svg {
-      color: #E0E0E0;
-      vertical-align: sub;
-      width: 20px;
-      height: 20px; }
-    .case-study .view-site:hover {
-      border: 2px solid #000;
-      color: #000;
-      transition: 0.8s; }
-    .case-study .view-site:hover > svg {
-      color: #000;
-      transition: 0.8s; }
-
-/* Media Query Mobile + Tablet */
+/* Media Query Tablet */
 @media only screen and (max-width: 800px) {
   .header {
     padding: 30px; }
@@ -145,6 +84,19 @@ body {
     .header a svg {
       height: 15px;
       width: 15px; }
+
+  .projectContainer .column {
+    padding: 20px; } }
+/* Media Query Mobile */
+@media only screen and (max-width: 400px) {
+  .header {
+    text-align: center;
+    padding: 20px 0; }
+    .header .name {
+      font-size: 13px; }
+    .header a svg {
+      height: 13px;
+      width: 13px; }
 
   .projectContainer .column {
     padding: 20px; } }
