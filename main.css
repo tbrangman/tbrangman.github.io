@@ -94,7 +94,7 @@
   width: 100%;
 }
 
-.projectThumbnail:hover .projectTooltip {
+.column:hover .projectTooltip {
     display: block;
 }
 
@@ -102,10 +102,10 @@
     display: none;
     background: #000;
     color: #fff;
+    font-weight: 700;
     border-radius: 30px;
     font-size: 10px;
-    font-weight: 500;
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 20px;
     position: absolute;
     z-index: 1000;
 }

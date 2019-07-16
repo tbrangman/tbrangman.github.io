@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	function fn(e) {
 	    for (var i=tooltip.length; i--;) {
-	        tooltip[i].style.left = e.pageX + -35 + 'px';
+	        tooltip[i].style.left = e.pageX + -40 + 'px';
 	        tooltip[i].style.top = e.pageY + -90 + 'px';
 	    }
 	}
