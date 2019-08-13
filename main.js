@@ -9,7 +9,8 @@ $(document).ready(function() {
 		$('.profile').css('display','none');
 	});
 
-	/* Hover state for project/titles */
+	/*
+	/* Hover state for project/titles 
 	var tooltip = document.querySelectorAll('.projectTooltip');
 
 	document.addEventListener('mousemove', fn, false);
@@ -20,5 +21,6 @@ $(document).ready(function() {
 	        tooltip[i].style.top = e.pageY + -90 + 'px';
 	    }
 	}
+	*/
 
 });

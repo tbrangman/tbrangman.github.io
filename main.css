@@ -9,6 +9,10 @@
   font-family: "DM Sans", sans-serif;
 }
 
+body {
+  background-color: rgb(238, 238, 238);
+}
+
 .header {
   padding: 30px 0;
   font-weight: 400;
@@ -28,11 +32,13 @@
 }
 
 .profile {
+  display: none;
+  left: 0;
+  top: 0;
   overflow: scroll;
   padding: 30px;
   z-index: 999;
   position: fixed;
-  display: none;
   background-color: #fff;
   width: 100vw;
   height: 100vh;
@@ -79,14 +85,8 @@
   font-weight: 400;
 }
 
-.projectRow .column {
-  text-align: left;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+.projectRow .column .image-browser {
+  margin-left: -30px;
 }
 
 .projectRow .column img {
@@ -94,20 +94,20 @@
   width: 100%;
 }
 
-.column:hover .projectTooltip {
-    display: block;
+.projectRow .projectDetail {
+  color: #000;
+  font-size: 13px;
+  margin: 20px 0;
 }
 
-.projectTooltip {
-    display: none;
-    background: #000;
-    color: #fff;
-    font-weight: 700;
-    border-radius: 30px;
-    font-size: 10px;
-    padding: 10px 10px 10px 20px;
-    position: absolute;
-    z-index: 1000;
+.projectRow .projectDetail sup {
+  margin: 2px;
+}
+
+.projectDetail a {
+  text-decoration: underline;
+  color: #000;
+  font-size: 13px;
 }
 
 /* Media Query Tablet */
@@ -124,7 +124,27 @@
   }
 
   .projectRow .column {
-    padding: 20px;
+    padding: 30px;
+  }
+
+  .projectRow .column .image-browser {
+    margin-left: 0px;
+  }
+
+  .projectRow .projectDetail {
+    color: #000;
+    font-size: 13px;
+    margin: 20px 10px;
+  }
+
+  .projectRow .projectDetail sup {
+    margin: 2px;
+  }
+
+  .projectDetail a {
+    text-decoration: underline;
+    color: #000;
+    font-size: 13px;
   }
 }
 /* Media Query Mobile */
@@ -143,5 +163,9 @@
 
   .projectContainer .column {
     padding: 20px;
+  }
+
+  .projectRow .column .image-browser {
+    margin-left: 0px;
   }
 }
